@@ -1,0 +1,22 @@
+package Day1;
+
+import java.lang.System;
+import java.lang.String;
+import static java.lang.Math.*;
+
+public class Ex5 {
+    public static void main(String args[]) {
+        if (args.length == 0) {
+            System.out.println("Please provide the radius as a command-line argument.");
+            return;
+        }
+        
+        try {
+            float radius = Float.parseFloat(args[0]);
+            float area = (float)PI * radius * radius;
+            System.out.println("The Area of a Circle is " + area);
+        } catch (NumberFormatException e) {
+            System.out.println("Please provide a valid number for the radius.");
+        }
+    }
+}

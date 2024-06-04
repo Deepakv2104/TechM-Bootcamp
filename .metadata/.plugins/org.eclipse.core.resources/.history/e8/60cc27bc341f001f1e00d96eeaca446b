@@ -1,0 +1,25 @@
+package ojdbcExample;
+import java.sql.*;
+public class DatabaseConfig {
+	static Connection con;
+	static PreparedStatement pstmt;
+	static ResultSet rs;
+	static Statement st;
+
+public static void main(String args[]) {
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/techm?useSSL=false","root","admin");
+		st = con.prepareStatement("select * from employee where empId=?");
+		pstmt.setString(1,"100");
+	    rs=pstmt.executeQuery();
+	    
+	    while(rs.next()) {
+	    	System.out.println(rs.getString("empName"));
+	    }
+	}//end of try
+	catch(Exception ex) {System.out.println("Exception");
+	}
+  }
+}
+}

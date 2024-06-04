@@ -1,0 +1,5 @@
+package ojdbcExample;
+
+public class DatabaseConfig {
+
+}
