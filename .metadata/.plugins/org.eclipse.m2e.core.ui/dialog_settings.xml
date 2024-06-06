@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\deepv\eclipse-workspace\TechM\TechM"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -44,13 +45,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.example.testing"/>
 			<item value="com.java"/>
 			<item value="com.sample.techM"/>
 		</list>
 		<list key="name">
+			<item value="ExampleTesting"/>
 			<item value="LearningMaven"/>
 		</list>
 		<list key="artifactId">
+			<item value="example-testing"/>
 			<item value="CubeGeneratorWeb"/>
 			<item value="com.sample.techM"/>
 		</list>
@@ -69,5 +73,19 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\deepv\Downloads\core-spring-example"/>
+			<item value="C:\Users\deepv\Downloads\Movie Ticket Booking\Movie Ticket Booking"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
 	</section>
 </section>
