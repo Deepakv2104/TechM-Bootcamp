@@ -34,9 +34,13 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+        "styles": [
+  "src/styles.css",
+  "node_modules/tailwindcss/base.css",
+  "node_modules/tailwindcss/components.css",
+  "node_modules/tailwindcss/utilities.css"
+],
+
             "scripts": []
           },
           "configurations": {
@@ -93,13 +97,20 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+         "styles": [
+  "src/styles.css",
+  "node_modules/tailwindcss/base.css",
+  "node_modules/tailwindcss/components.css",
+  "node_modules/tailwindcss/utilities.css"
+],
+
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "91fc3ca7-7751-4f49-9e1f-28862f1c2a73"
   }
 }

@@ -1,0 +1,7 @@
+/* home.component.css */
+
+.bg-hero {
+    background-image: url('./hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
