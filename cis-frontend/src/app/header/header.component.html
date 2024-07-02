@@ -1,0 +1,22 @@
+<header class="bg-gray-950 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div>
+        <a href=""><h1 class="text-2xl font-bold">Computech Inventory Solutions</h1></a>
+      </div>
+      <nav>
+        <ul class="flex space-x-4">
+          <!-- Show Logout when logged in -->
+          <!-- <li *ngIf="isLoggedIn"><a (click)="logout()" class="hover:text-gray-400 cursor-pointer">Logout</a></li> -->
+          <!-- Show Login and Signup when not logged in -->
+          <li *ngIf="!isLoggedIn"><a href="/authenticate" class="hover:text-gray-400">Login</a></li>
+          <li *ngIf="!isLoggedIn"><a href="/register" class="hover:text-gray-400">Signup</a></li>
+          <!-- Add more links as needed -->
+        </ul>
+      </nav>
+      <!-- Display the session timer when logged in -->
+      <div *ngIf="isLoggedIn" class="ml-4 text-gray-300">
+        Session time left: {{ formattedSessionTimeLeft }}
+      </div>
+    </div>
+  </header>
+  

@@ -1,0 +1,145 @@
+<div class="bg-gray-900 p-6 shadow-lg rounded-lg">
+  <h2 class="text-xl font-semibold text-white mb-4">Edit Computer</h2>
+
+  <form (ngSubmit)="onSubmit()" #editForm="ngForm">
+    <!-- Success Message -->
+    <div *ngIf="successMessage" class="bg-green-500 text-white p-4 rounded mb-4">
+      {{ successMessage }}
+    </div>
+
+    <!-- Grid Layout for Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Section: Basic Info -->
+      <div class="bg-gray-800 rounded-lg shadow-md">
+        <!-- Section Header -->
+        <button type="button" (click)="toggleSection('basicInfo')"
+                class="w-full flex justify-between items-center p-4 bg-gray-700 text-white text-left focus:outline-none rounded-t-lg">
+          <span class="text-lg font-medium">Basic Info</span>
+          <svg [ngClass]="{'rotate-180': isBasicInfoOpen}" class="w-6 h-6 transform transition-transform duration-200"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <!-- Section Content -->
+        <div *ngIf="isBasicInfoOpen" class="p-4 space-y-4">
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-300"><i class="fas fa-desktop"></i></span>
+            <input type="text" id="brand" name="brand" [(ngModel)]="computer.brand"
+                   class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                   placeholder="Brand">
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-300"><i class="fas fa-cube"></i></span>
+            <input type="text" id="model" name="model" [(ngModel)]="computer.model"
+                   class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                   placeholder="Model">
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Hardware Specs -->
+      <div class="bg-gray-800 rounded-lg shadow-md">
+        <!-- Section Header -->
+        <button type="button" (click)="toggleSection('hardwareSpecs')"
+                class="w-full flex justify-between items-center p-4 bg-gray-700 text-white text-left focus:outline-none rounded-t-lg">
+          <span class="text-lg font-medium">Hardware Specs</span>
+          <svg [ngClass]="{'rotate-180': isHardwareSpecsOpen}" class="w-6 h-6 transform transition-transform duration-200"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <!-- Section Content -->
+        <div *ngIf="isHardwareSpecsOpen" class="p-4 space-y-4">
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-300"><i class="fas fa-microchip"></i></span>
+            <input type="text" id="cpu" name="cpu" [(ngModel)]="computer.cpu"
+                   class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                   placeholder="CPU">
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-300"><i class="fas fa-memory"></i></span>
+            <input type="number" id="ram" name="ram" [(ngModel)]="computer.ram"
+                   class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                   placeholder="RAM">
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-300"><i class="fas fa-hdd"></i></span>
+            <input type="number" id="storage" name="storage" [(ngModel)]="computer.storage"
+                   class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                   placeholder="Storage">
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-300"><i class="fas fa-hdd"></i></span>
+            <input type="text" id="storageType" name="storageType" [(ngModel)]="computer.storageType"
+                   class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                   placeholder="Storage Type">
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-300"><i class="fas fa-memory"></i></span>
+            <input type="text" id="gpu" name="gpu" [(ngModel)]="computer.gpu"
+                   class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                   placeholder="GPU">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Other Info -->
+    <div class="bg-gray-800 rounded-lg shadow-md mt-4">
+      <!-- Section Header -->
+      <button type="button" (click)="toggleSection('otherInfo')"
+              class="w-full flex justify-between items-center p-4 bg-gray-700 text-white text-left focus:outline-none rounded-t-lg">
+        <span class="text-lg font-medium">Other Info</span>
+        <svg [ngClass]="{'rotate-180': isOtherInfoOpen}" class="w-6 h-6 transform transition-transform duration-200"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <!-- Section Content -->
+      <div *ngIf="isOtherInfoOpen" class="p-4 space-y-4">
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-300"><i class="fab fa-windows"></i></span>
+          <input type="text" id="operatingSystem" name="operatingSystem" [(ngModel)]="computer.operatingSystem"
+                 class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                 placeholder="Operating System">
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-300"><i class="fas fa-cube"></i></span>
+          <input type="text" id="formFactor" name="formFactor" [(ngModel)]="computer.formFactor"
+                 class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                 placeholder="Form Factor">
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-300"><i class="far fa-calendar-alt"></i></span>
+          <input type="date" id="purchaseDate" name="purchaseDate" [(ngModel)]="computer.purchaseDate"
+                 class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white">
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-300"><i class="fas fa-calendar-times"></i></span>
+          <input type="date" id="warrantyExpiryDate" name="warrantyExpiryDate" [(ngModel)]="computer.warrantyExpiryDate"
+                 class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white">
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-300"><i class="fas fa-barcode"></i></span>
+          <input type="text" id="serialNumber" name="serialNumber" [(ngModel)]="computer.serialNumber"
+                 class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                 placeholder="Serial Number">
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-300"><i class="fas fa-barcode"></i></span>
+          <input type="text" id="isAvailable" name="isAvailable" [(ngModel)]="computer.available"
+                 class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white"
+                 placeholder="Availabe">
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="mt-6 flex justify-end">
+      <button type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        Save Changes
+      </button>
+    </div>
+  </form>
+</div>
