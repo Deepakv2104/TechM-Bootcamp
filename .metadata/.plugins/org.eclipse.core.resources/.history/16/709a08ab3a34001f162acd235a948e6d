@@ -1,0 +1,7 @@
+package com.anurag.computer_inventory_system.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.anurag.computer_inventory_system.entities.Computer;
+
+public interface ComputerDao extends JpaRepository<Computer, Long> {
+}

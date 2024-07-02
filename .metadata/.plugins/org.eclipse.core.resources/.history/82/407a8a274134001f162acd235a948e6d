@@ -1,0 +1,33 @@
+package com.anurag.computer_inventory_system.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.anurag.computer_inventory_system.entities.Computer;
+import com.anurag.computer_inventory_system.services.ComputerService;
+import com.telusko.quizapp.model.Question;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import java.util.List;
+@RestController
+@RequestMapping("inventory")
+public class ComputerController {
+	
+	@Autowired
+	ComputerService computerService;
+	@GetMapping("allComputers")
+	public ResponseEntity<List<Computer>> getAllComputers(){
+		return computerService.getAllComputers();
+	}
+	
+	  @PostMapping("add")
+	    public ResponseEntity<String> addComputer(@RequestBody Computer question){
+	        return  computerService.addComputer(question);
+	    }
+
+}
+	

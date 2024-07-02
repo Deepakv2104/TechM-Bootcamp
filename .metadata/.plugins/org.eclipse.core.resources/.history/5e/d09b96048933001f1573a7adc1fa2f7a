@@ -1,0 +1,29 @@
+package com.anurag.computer_inventory_system.model;
+
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@ToString
+public class JwtRequest{
+
+private String emaill;
+
+
+private String password;
+
+
+public String getEmail() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+
+public String getPassword() {
+	// TODO Auto-generated method stub
+	return null;
+}
+}

@@ -1,0 +1,5 @@
+package com.anurag.computer_inventory_system.dtos;
+
+public class LoginUserDto {
+
+}
