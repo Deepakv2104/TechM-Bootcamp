@@ -76,6 +76,12 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="G:\quiz-app-spring"/>
+			<item value="G:\Online Banking System\BankingSystem\BankingSystemBackend"/>
+			<item value="G:\spring-boot-spring-security-jwt-authentication"/>
+			<item value="C:\Users\Admin\eclipse-workspace\JWT-Authentication-SpringBoot-main"/>
+			<item value="C:\Users\Admin\eclipse-workspace\TechM-Assignment\springboot-jwt-auth"/>
+			<item value="C:\Users\Admin\eclipse-workspace\TechM-Assignment\Ticket-App-Project\Ticket BackEnd"/>
 			<item value="C:\Users\deepv\Downloads\core-spring-example"/>
 			<item value="C:\Users\deepv\Downloads\Movie Ticket Booking\Movie Ticket Booking"/>
 		</list>
