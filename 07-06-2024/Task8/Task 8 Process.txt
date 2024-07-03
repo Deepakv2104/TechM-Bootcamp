@@ -1,0 +1,86 @@
+Microsoft Windows [Version 10.0.22631.3672]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Tehith>D:
+
+D:\>cd TechMahindra
+
+D:\TechMahindra>cd Assignments4-June-7
+
+D:\TechMahindra\Assignments4-June-7>dir
+ Volume in drive D is New Volume
+ Volume Serial Number is 8C62-42A7
+
+ Directory of D:\TechMahindra\Assignments4-June-7
+
+11-06-2024  01:10    <DIR>          .
+11-06-2024  02:00    <DIR>          ..
+11-06-2024  01:10                 0 hey.txt
+               1 File(s)              0 bytes
+               2 Dir(s)  499,956,224,000 bytes free
+
+D:\TechMahindra\Assignments4-June-7>mvn archetype:generate -DgroupId=com.sample.techm -DartifactId=Task8 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] >>> archetype:3.2.1:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< archetype:3.2.1:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO]
+[INFO] --- archetype:3.2.1:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: D:\TechMahindra\Assignments4-June-7
+[INFO] Parameter: package, Value: com.sample.techm
+[INFO] Parameter: groupId, Value: com.sample.techm
+[INFO] Parameter: artifactId, Value: Task8
+[INFO] Parameter: packageName, Value: com.sample.techm
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: D:\TechMahindra\Assignments4-June-7\Task8
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.179 s
+[INFO] Finished at: 2024-06-11T23:31:11+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\TechMahindra\Assignments4-June-7>cd Task8
+
+D:\TechMahindra\Assignments4-June-7\Task8>mvn clean compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------------< com.sample.techm:Task8 >-----------------------
+[INFO] Building Task8 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.2.0:clean (default-clean) @ Task8 ---
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ Task8 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\TechMahindra\Assignments4-June-7\Task8\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Task8 ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding windows-1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 1.8] to target\classes
+[WARNING] bootstrap class path not set in conjunction with -source 8
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.522 s
+[INFO] Finished at: 2024-06-11T23:32:52+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\TechMahindra\Assignments4-June-7\Task8>cd target
+
+D:\TechMahindra\Assignments4-June-7\Task8\target>cd classes
+
+D:\TechMahindra\Assignments4-June-7\Task8\target\classes>java com.sample.techm.App
+Hello World!

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr'; // Import ToastrService
+import { ToastrService } from 'ngx-toastr';
 import { ComputerService } from '../services/computer.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class AddComputerComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private computerService: ComputerService,
-    private toastr: ToastrService // Inject ToastrService
+    private toastr: ToastrService
   ) {
     this.computerForm = this.fb.group({
       brand: ['', Validators.required],
@@ -30,7 +30,7 @@ export class AddComputerComponent implements OnInit {
       formFactor: [''],
       purchaseDate: [null, Validators.required],
       warrantyExpiryDate: [null, Validators.required],
-      isAvailable: [true]
+      isAvailable: ['true', Validators.required]
     }, {
       validators: this.warrantyExpiryDateValidator
     });
@@ -45,8 +45,8 @@ export class AddComputerComponent implements OnInit {
       this.computerService.addComputer(this.computerForm.value)
         .subscribe({
           next: (response) => {
-            console.log('Computer added successfully:', response);
-            this.showToast('success', 'Computer Added', 'Computer added successfully.');
+            console.log('Response from backend:', response);
+            this.showToast('success', 'Computer Added', 'Computer added successfully.'); // Ensure response text is handled correctly
             this.computerForm.reset();
           },
           error: (error) => {
@@ -79,13 +79,21 @@ export class AddComputerComponent implements OnInit {
     return null;
   }
 
-  showToast(type: string, title: string, message: string): void {
-    this.toastr.show(message, title, {
-      closeButton: true,
-      timeOut: 3000, // Toast timeout duration
-      positionClass: 'toast-top-right', // Toast position
-      progressBar: true, // Display a progress bar
-      toastClass: `ngx-toastr toast-${type}`,
-    });
+  showToast(type: 'success' | 'error', title: string, message: string): void {
+    if (type === 'success') {
+      this.toastr.success(message, title, {
+        closeButton: true,
+        timeOut: 3000,
+        positionClass: 'toast-top-right',
+        progressBar: true,
+      });
+    } else if (type === 'error') {
+      this.toastr.error(message, title, {
+        closeButton: true,
+        timeOut: 3000,
+        positionClass: 'toast-top-right',
+        progressBar: true,
+      });
+    }
   }
 }

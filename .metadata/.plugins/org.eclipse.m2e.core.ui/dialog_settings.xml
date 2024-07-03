@@ -76,6 +76,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Admin\eclipse-workspace\TechM-Assignment\computer-inventory-system-backend"/>
 			<item value="G:\quiz-app-spring"/>
 			<item value="G:\Online Banking System\BankingSystem\BankingSystemBackend"/>
 			<item value="G:\spring-boot-spring-security-jwt-authentication"/>

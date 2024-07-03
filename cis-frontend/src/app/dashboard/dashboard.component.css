@@ -1,0 +1,28 @@
+/* Styles for the sidebar */
+aside {
+    transition: transform 0.3s ease;
+    z-index: 20; /* Ensure the sidebar is above the main content */
+    height: 100%; /* Ensure the sidebar covers the full height */
+  }
+  
+  aside.hidden {
+    transform: translateX(-100%);
+  }
+  
+  @media (min-width: 768px) {
+    aside {
+      transform: translateX(0);
+      position: relative;
+    }
+  }
+  
+  /* Styles for the toggle button */
+  button {
+    z-index: 30; /* Ensure the button is above the sidebar and main content */
+  }
+  
+  /* Styles for main content */
+  main {
+    z-index: 10; /* Ensure the main content is below the sidebar */
+  }
+  

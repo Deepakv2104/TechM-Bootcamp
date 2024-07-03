@@ -1,0 +1,4 @@
+li:not(:empty){
+    background-color: blue;
+    font-size: 25px;
+}

@@ -1,0 +1,8 @@
+.container div:first-child{
+    background-color: red;
+    font-style: italic;
+}
+.container div:last-child{
+    background-color: blue;
+    font-style: italic;
+}

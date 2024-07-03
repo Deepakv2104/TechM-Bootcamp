@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3/css/bootstrap.css">
+    <link rel="stylesheet" href="../Bootstrap-5.3.3/css/bootstrap.min.css">
+    <script src="../bootstrap-5.3.3/js/bootstrap.js"></script>
+    <script src="../bootstrap-5.3.3/js/bootstrap.min.js"></script>
+    <style>
+        .mb-3{
+            display: flex;
+        }
+          .container{
+            display: flex;
+            justify-content: center;
+          }
+        .box{
+            background-color: lightgray;
+            width: 380px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 12%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="form1">
+                <form>
+                    <h1 style="position: relative;bottom: 40px;left:10px">Please Sign In</h1>
+                    <div class="mb-3">
+                      <label for="email" class="form-label" style="position: relative; left: 10px;;">Email</label>
+                      <input type="email" class="form-control" style="position: relative; left: 40px;width: 205px" id="email" aria-describedby="emailHelp" placeholder="Enter your Email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" style="position: relative; left: 12px;" id="password" placeholder="Enter your Password">
+                    </div>
+                    <button type="submit" class="btn btn-success" style="position: relative;left: 115px;top: 10px;" class="btn btn-primary">Sign In</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

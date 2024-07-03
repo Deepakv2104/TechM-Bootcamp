@@ -1,0 +1,4 @@
+[data-category^="fruit"] {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="color" class="com.animals.Color">
+<property name="baseColor" value="white"></property>
+<property name="textureColor" value="grey"></property>
+</bean>
+
+<bean id="differentColors" class="com.animals.Color">
+<property name="baseColor" value="yellow"></property>
+<property name="textureColor" value="black"></property>
+</bean>
+
+<!-- Autowire No -->
+<bean id="cat" class="com.animals.Cat">
+<property name="name" value="Cat"></property>
+<property name="color" ref="color"></property>
+</bean>
+
+<!-- Autowire byName -->
+<bean id="dog" class="com.animals.Dog" autowire="byName">
+<property name="name" value="Dog"></property>
+</bean>
+
+<!-- Autowire byName -->
+<bean id="frog" class="com.animals.Frog" autowire="constructor">
+<property name="name" value="Frog"></property>
+</bean>
+</beans>
