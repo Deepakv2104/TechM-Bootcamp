@@ -3,6 +3,11 @@
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1717046730469_0" label="Java Main Sources" name="Java Main Sources"/>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1717046730503_1" label="Java Test Sources" name="Java Test Sources"/>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1717572614951_3" label="movie_ticket_booking" name="movie_ticket_booking"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1721215451193_5" label="JSP FullStack" name="JSP FullStack">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Mock Exit Test" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JSP FullStack" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1717046740650_2" label="Window Working Set" name="Aggregate for window 1717046740650"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1719383072540_4" label="Window Working Set" name="Aggregate for window 1719383072538"/>
+<mruList name="JSP FullStack"/>
 </workingSetManager>
